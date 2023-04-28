@@ -999,7 +999,7 @@ func newWebsocketConn(sc *SubscriptionClient) (WebsocketConn, error) {
 
 	options := &websocket.DialOptions{
 		Subprotocols: sc.protocol.GetSubprotocols(),
-		HTTPClient:   sc.websocketOptions.HTTPClient,
+		// HTTPClient:   sc.websocketOptions.HTTPClient,
 	}
 
 	c, _, err := websocket.Dial(sc.GetContext(), sc.GetURL(), options)
